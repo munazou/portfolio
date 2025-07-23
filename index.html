@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ポートフォリオ | むなぞう</title>
+  <title>ポートフォリオ | munazou</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -40,24 +40,28 @@
       margin-bottom: 1rem;
     }
     .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
       padding: 2rem;
     }
     .project {
-      border: 1px solid #ccc;
-      padding: 1rem;
+      text-align: center;
     }
     .project img {
       width: 100%;
+      max-width: 900px;
       height: auto;
+      cursor: pointer;
+    }
+    .project-title {
+      font-size: 1.5rem;
+      margin-top: 1rem;
     }
     #about {
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      text-align: center;
+      background: #f4f4f4;
     }
     #about img {
       width: 160px;
@@ -65,6 +69,10 @@
       border-radius: 50%;
       margin-bottom: 1rem;
       object-fit: cover;
+    }
+    #contact {
+      padding: 2rem;
+      text-align: center;
     }
     footer {
       text-align: center;
@@ -77,8 +85,8 @@
   <header>
     <h1>munazou</h1>
     <nav>
-      <a href="#about">About</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -90,18 +98,41 @@
 
   <section id="portfolio" class="portfolio">
     <div class="project">
-      <img src="project_qu.jpg" alt="道の駅まえばし赤城 Shop Cafe Qu">
-      <h3>道の駅まえばし赤城 - Shop Cafe Qu</h3>
+      <a href="#project-qu-detail">
+        <img src="project_qu.jpg" alt="道の駅まえばし赤城 Shop Cafe Qu">
+      </a>
+      <div class="project-title">道の駅まえばし赤城 - Shop Cafe Qu</div>
+    </div>
+    <div class="project">
+      <a href="#project-hoop-detail">
+        <img src="project_hoop.jpg" alt="Private Gym HOOP">
+      </a>
+      <div class="project-title">Private Gym HOOP</div>
+    </div>
+    <div class="project">
+      <a href="#project-01-detail">
+        <img src="project_01production.jpg" alt="01production 代々木体育館イベントスペース">
+      </a>
+      <div class="project-title">01production 代々木体育館イベントスペース</div>
+    </div>
+  </section>
+
+  <!-- プロジェクト詳細（任意で増やせます） -->
+  <section id="project-qu-detail" class="portfolio" style="padding-top: 4rem;">
+    <div class="project">
+      <h2>道の駅まえばし赤城 - Shop Cafe Qu</h2>
       <p>群馬県前橋市に位置する道の駅に併設されたカフェ。地域の素材と調和した空間づくりを行いました。</p>
     </div>
+  </section>
+  <section id="project-hoop-detail" class="portfolio" style="padding-top: 4rem;">
     <div class="project">
-      <img src="project_hoop.jpg" alt="Private Gym HOOP">
-      <h3>Private Gym HOOP</h3>
+      <h2>Private Gym HOOP</h2>
       <p>プライベートジムとしての使いやすさと落ち着きのあるデザインを追求した空間設計。</p>
     </div>
+  </section>
+  <section id="project-01-detail" class="portfolio" style="padding-top: 4rem;">
     <div class="project">
-      <img src="project_01production.jpg" alt="01production イベントスペース">
-      <h3>01production 代々木体育館イベントスペース</h3>
+      <h2>01production 代々木体育館イベントスペース</h2>
       <p>イベント展示空間としての視認性と導線に配慮した構成。大空間の中に人のスケールを丁寧に配置。</p>
     </div>
   </section>
@@ -112,7 +143,7 @@
     <p>建築設計を通じて、生活の中にある小さな「願い」をかたちにしています。<br>地域に根ざした空間提案やDIY的視点も交えながら、実現可能で温かみのあるデザインを心がけています。</p>
   </section>
 
-  <section id="contact" style="padding: 2rem;">
+  <section id="contact">
     <h2>Contact</h2>
     <p>📧 <a href="mailto:uzoumunazou@gmail.com">uzoumunazou@gmail.com</a></p>
     <p>📷 <a href="https://www.instagram.com/uzoumunazou/" target="_blank">Instagram / @uzoumunazou</a></p>
