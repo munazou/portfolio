@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ポートフォリオ | munazou</title>
+  <title>Portfolio | munazou</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     @font-face {
@@ -19,70 +19,48 @@
     }
     header {
       background: #f9f9f9;
-      padding: 2rem;
-      text-align: center;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     header h1 {
       margin: 0;
       font-size: 2rem;
       font-family: "YuMincho", serif;
     }
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
     nav a {
-      margin: 0 1rem;
+      margin-left: 1rem;
       text-decoration: none;
       color: #333;
+      font-size: 1rem;
     }
-    .hero {
-      background: #eee;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .hero h2 {
-      margin-bottom: 1rem;
-    }
-    .portfolio {
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
+    .categories {
       padding: 2rem;
     }
-    .project {
-      text-align: center;
-    }
-    .project img {
-      width: 100%;
-      max-width: 900px;
-      height: auto;
-      cursor: pointer;
-    }
-    .project-title {
+    .category-title {
       font-size: 1.5rem;
-      margin-top: 1rem;
-    }
-    #about {
-      padding: 2rem;
+      margin: 2rem 0 1rem;
       text-align: center;
-      background: #f4f4f4;
     }
-    #about img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
       object-fit: cover;
-    }
-    #contact {
-      padding: 2rem;
-      text-align: center;
+      cursor: pointer;
+      border: 1px solid #ccc;
     }
     footer {
       text-align: center;
       padding: 2rem;
       background: #f9f9f9;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -90,60 +68,40 @@
   <header>
     <h1>munazou</h1>
     <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>生活者とともに考え、かたちにする建築デザイン</h2>
-    <p>暮らしの声に耳を傾け、日常に寄り添った空間を提案します。</p>
-  </section>
+  <main class="categories">
+    <h2 class="category-title">Space Design</h2>
+    <div class="gallery">
+      <a href="project_qu.html"><img src="project_qu.jpg" alt="Shop Cafe Qu"></a>
+      <a href="project_hoop.html"><img src="project_hoop.jpg" alt="Private Gym HOOP"></a>
+      <a href="project_01production.html"><img src="project_01production.jpg" alt="01production"></a>
+      <a href="project_nownever_office.html"><img src="nownever_office.jpg" alt="Nownever Office Proposal"></a>
+      <a href="project_laughtcoffee.html"><img src="laughtcoffee.jpg" alt="Laught Coffee Toilet"></a>
+      <a href="project_kurasauna.html"><img src="kurasauna.jpg" alt="Sake Brewery Sauna"></a>
+      <a href="project_renovation.html"><img src="renovation.jpg" alt="Window Pocket Renovation"></a>
+    </div>
 
-  <section id="portfolio" class="portfolio">
-    <h2 style="text-align:center">Portfolio Categories</h2>
+    <h2 class="category-title">Detail Design</h2>
+    <div class="gallery">
+      <a href="project_nownever_floor.html"><img src="nownever_floor.jpg" alt="Nownever Floor Work"></a>
+      <a href="project_takasaki.html"><img src="takasaki.jpg" alt="Takasaki Paint and Kitchen"></a>
+      <a href="project_grassa.html"><img src="grassa.jpg" alt="GRASSA Door"></a>
+      <a href="project_maruka.html"><img src="maruka.jpg" alt="Maruka Changing Table"></a>
+      <a href="project_chair.html"><img src="chair.jpg" alt="Not a Chair"></a>
+    </div>
 
-    <h3 style="text-align:center">Space Design（空間設計）</h3>
-    <ul>
-      <li>道の駅まえばし赤城 - Shop Cafe Qu</li>
-      <li>Private Gym HOOP</li>
-      <li>01production 代々木体育館イベントスペース</li>
-      <li>Nownever事務所 空間提案</li>
-      <li>Laught Coffeeトイレ 空間提案</li>
-      <li>酒蔵×サウナ（蔵リノベーション提案）</li>
-      <li>窓辺のぽっけ マンションリノベーション（コンペ優良賞）</li>
-    </ul>
-
-    <h3 style="text-align:center">Detail Design（詳細設計）</h3>
-    <ul>
-      <li>Nownever事務所 床張</li>
-      <li>高崎賃貸 内装塗装・キッチン張り替え</li>
-      <li>GRASSA 回転扉修繕</li>
-      <li>喫茶マルカ おむつ台制作</li>
-      <li>これは椅子ではない（椅子制作）</li>
-    </ul>
-
-    <h3 style="text-align:center">Community / Urban Design（街づくり）</h3>
-    <ul>
-      <li>Christmas Garden（群馬県庁前広場イベント）</li>
-      <li>ムナカタマラソン</li>
-      <li>広瀬en川 ストリートファーニチャ</li>
-      <li>テラス制作（DIY）</li>
-    </ul>
-  </section>
-
-  <section id="about">
-    <img src="myphoto.jpg" alt="顔写真">
-    <h2>About</h2>
-    <p>建築設計を通じて、生活の中にある小さな「願い」をかたちにしています。<br>地域に根ざした空間提案やDIY的視点も交えながら、実現可能で温かみのあるデザインを心がけています。</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 <a href="mailto:uzoumunazou@gmail.com">uzoumunazou@gmail.com</a></p>
-    <p>📷 <a href="https://www.instagram.com/uzoumunazou/" target="_blank">Instagram / @uzoumunazou</a></p>
-  </section>
+    <h2 class="category-title">Community / Urban Design</h2>
+    <div class="gallery">
+      <a href="project_christmas.html"><img src="christmas.jpg" alt="Christmas Garden"></a>
+      <a href="project_marathon.html"><img src="marathon.jpg" alt="Munakata Marathon"></a>
+      <a href="project_streetfurni.html"><img src="streetfurni.jpg" alt="Hirose Street Furniture"></a>
+      <a href="project_terrace.html"><img src="terrace.jpg" alt="DIY Terrace"></a>
+    </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 munazou</p>
