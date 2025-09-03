@@ -2,109 +2,191 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | munazou</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>munazou | Works</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: "YuMincho";
-      src: local("YuMincho"), local("Yu Mincho"), local("游明朝体");
+    /* ===== Base ===== */
+    @font-face { font-family:"YuMincho"; src: local("YuMincho"), local("Yu Mincho"), local("游明朝体"); }
+    :root{
+      --bg:#0e0f13;        /* 深めの黒に近い紺 */
+      --ink:#e7e9ee;       /* 文字色 */
+      --muted:#a8acb8;     /* 補助文字 */
+      --accent:#5ad1ff;    /* サイバーな青 */
+      --accent2:#ff8bd1;   /* マゼンタ寄り */
+      --grid:#1b1d24;      /* 背景グリッド */
+      --card:#151720;      /* タイル下地 */
+      --br:18px;
     }
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #111;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--ink); background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.25)),
+        radial-gradient(1200px 800px at 10% -10%, rgba(90,209,255,0.08), transparent 70%),
+        radial-gradient(1000px 600px at 110% 10%, rgba(255,139,209,0.07), transparent 70%),
+        repeating-linear-gradient(0deg, var(--grid), var(--grid) 1px, transparent 1px, transparent 24px),
+        repeating-linear-gradient(90deg, var(--grid), var(--grid) 1px, transparent 1px, transparent 24px),
+        var(--bg);
+      background-attachment: fixed;
+      font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+      letter-spacing: .02em;
     }
-    header {
-      background: #f9f9f9;
-      padding: 2rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+
+    /* ===== Header ===== */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(14,15,19,.85), rgba(14,15,19,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      font-family: "YuMincho", serif;
+    .bar{max-width:1200px; margin:0 auto; display:flex; align-items:center; gap:16px; padding:16px 20px;}
+    .brand{margin:0; font-size:24px; font-family:"YuMincho", serif; letter-spacing:.06em}
+    nav{margin-left:auto; display:flex; gap:16px}
+    nav a{color:var(--muted); text-decoration:none; font:600 14px 'IBM Plex Mono', monospace; letter-spacing:.06em}
+    nav a:hover{color:var(--ink)}
+
+    /* ===== Title strip ===== */
+    .lead{max-width:1200px; margin:18px auto 0; padding:0 20px 10px; color:var(--muted); font:500 12px 'IBM Plex Mono', monospace}
+
+    /* ===== Gallery Grid ===== */
+    .grid{max-width:1200px; margin:0 auto; padding:16px 20px 80px;
+      display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); grid-auto-rows: 160px; gap:14px;}
+
+    .tile{position:relative; border-radius: var(--br); overflow:hidden; background:var(--card);
+      border:1px solid rgba(255,255,255,.06);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      transform-style: preserve-3d;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     }
-    nav a {
-      margin-left: 1rem;
-      text-decoration: none;
-      color: #333;
-      font-size: 1rem;
+    .tile:hover{transform: translateY(-4px) perspective(800px) rotateX(.75deg) rotateY(-.75deg);
+      box-shadow: 0 14px 40px rgba(0,0,0,.5);
+      border-color: rgba(90,209,255,.35);
     }
-    .categories {
-      padding: 2rem;
+
+    /* size variations (playful but not masonry) */
+    .span-2r{grid-row: span 2}
+    .span-2c{grid-column: span 2}
+
+    /* image */
+    .thumb{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter: saturate(1.02) contrast(1.05)}
+
+    /* cyber edge glow */
+    .tile::after{content:""; position:absolute; inset:0; pointer-events:none;
+      background: radial-gradient(60% 40% at 50% 0%, rgba(90,209,255,.25), transparent 60%),
+                  radial-gradient(40% 30% at 100% 100%, rgba(255,139,209,.18), transparent 60%);
+      mix-blend-mode: screen; opacity:.75; transition: opacity .25s ease;
     }
-    .category-title {
-      font-size: 1.5rem;
-      margin: 2rem 0 1rem;
-      text-align: center;
+    .tile:hover::after{opacity:1}
+
+    /* caption */
+    .cap{position:absolute; left:10px; bottom:10px; right:10px;
+      display:flex; justify-content:space-between; align-items:flex-end; gap:10px;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 0 1rem;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      cursor: pointer;
-      border: 1px solid #ccc;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #f9f9f9;
-      font-size: 0.9rem;
-    }
+    .label{background: rgba(14,15,19,.66); backdrop-filter: blur(6px); border:1px solid rgba(255,255,255,.1);
+      color:var(--ink); padding:8px 10px; border-radius:12px; font:600 12px 'IBM Plex Mono', monospace; letter-spacing:.05em}
+    .cat{color:var(--muted); font:500 11px 'IBM Plex Mono', monospace}
+
+    a.tile{display:block; text-decoration:none; color:inherit}
+
+    /* footer */
+    footer{max-width:1200px; margin:0 auto; padding:24px 20px 60px; color:var(--muted); font:500 12px 'IBM Plex Mono', monospace}
+
+    /* responsive tweak */
+    @media (min-width:1024px){ .grid{grid-auto-rows: 180px} }
   </style>
 </head>
 <body>
   <header>
-    <h1>munazou</h1>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="bar">
+      <h1 class="brand">munazou</h1>
+      <nav>
+        <a href="index.html">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="categories">
-    <h2 class="category-title">Space Design</h2>
-    <div class="gallery">
-      <a href="project_qu.html"><img src="project_qu.jpg" alt="Shop Cafe Qu"></a>
-      <a href="project_hoop.html"><img src="project_hoop.jpg" alt="Private Gym HOOP"></a>
-      <a href="project_01production.html"><img src="project_01production.jpg" alt="01production"></a>
-      <a href="project_nownever_office.html"><img src="nownever_office.jpg" alt="Nownever Office Proposal"></a>
-      <a href="project_laughtcoffee.html"><img src="laughtcoffee.jpg" alt="Laught Coffee Toilet"></a>
-      <a href="project_kurasauna.html"><img src="kurasauna.jpg" alt="Sake Brewery Sauna"></a>
-      <a href="project_renovation.html"><img src="renovation.jpg" alt="Window Pocket Renovation"></a>
-    </div>
+  <div class="lead">// Works — シンプルなギャラリー。遊び心とデジタル感を少しだけ。</div>
 
-    <h2 class="category-title">Detail Design</h2>
-    <div class="gallery">
-      <a href="project_nownever_floor.html"><img src="nownever_floor.jpg" alt="Nownever Floor Work"></a>
-      <a href="project_takasaki.html"><img src="takasaki.jpg" alt="Takasaki Paint and Kitchen"></a>
-      <a href="project_grassa.html"><img src="grassa.jpg" alt="GRASSA Door"></a>
-      <a href="project_maruka.html"><img src="maruka.jpg" alt="Maruka Changing Table"></a>
-      <a href="project_chair.html"><img src="chair.jpg" alt="Not a Chair"></a>
-    </div>
+  <main class="grid">
+    <!-- Space Design -->
+    <a class="tile span-2c" href="project_qu.html" title="Shop Cafe Qu">
+      <img class="thumb" src="project_qu.jpg" alt="Shop Cafe Qu">
+      <div class="cap"><span class="label">Shop Cafe Qu</span><span class="cat">Space Design</span></div>
+    </a>
 
-    <h2 class="category-title">Community / Urban Design</h2>
-    <div class="gallery">
-      <a href="project_christmas.html"><img src="christmas.jpg" alt="Christmas Garden"></a>
-      <a href="project_marathon.html"><img src="marathon.jpg" alt="Munakata Marathon"></a>
-      <a href="project_streetfurni.html"><img src="streetfurni.jpg" alt="Hirose Street Furniture"></a>
-      <a href="project_terrace.html"><img src="terrace.jpg" alt="DIY Terrace"></a>
-    </div>
+    <a class="tile" href="project_hoop.html" title="Private Gym HOOP">
+      <img class="thumb" src="project_hoop.jpg" alt="Private Gym HOOP">
+      <div class="cap"><span class="label">Private Gym HOOP</span><span class="cat">Space Design</span></div>
+    </a>
+
+    <a class="tile" href="project_01production.html" title="01production / Yoyogi Gym">
+      <img class="thumb" src="project_01production.jpg" alt="01production">
+      <div class="cap"><span class="label">01production</span><span class="cat">Space Design</span></div>
+    </a>
+
+    <a class="tile span-2r" href="project_nownever_office.html" title="Nownever Office / Proposal">
+      <img class="thumb" src="nownever_office.jpg" alt="Nownever Office Proposal">
+      <div class="cap"><span class="label">Nownever Office</span><span class="cat">Space Design</span></div>
+    </a>
+
+    <a class="tile" href="project_laughtcoffee.html" title="Laught Coffee / Toilet Proposal">
+      <img class="thumb" src="laughtcoffee.jpg" alt="Laught Coffee">
+      <div class="cap"><span class="label">Laught Coffee</span><span class="cat">Space Design</span></div>
+    </a>
+
+    <!-- Detail Design -->
+    <a class="tile" href="project_nownever_floor.html" title="Nownever / Floor Work">
+      <img class="thumb" src="nownever_floor.jpg" alt="Nownever Floor">
+      <div class="cap"><span class="label">Nownever / Floor</span><span class="cat">Detail Design</span></div>
+    </a>
+
+    <a class="tile" href="project_takasaki.html" title="Takasaki / Paint & Kitchen">
+      <img class="thumb" src="takasaki.jpg" alt="Takasaki Renovation">
+      <div class="cap"><span class="label">Takasaki Renov.</span><span class="cat">Detail Design</span></div>
+    </a>
+
+    <a class="tile span-2c" href="project_grassa.html" title="GRASSA / Revolving Door Repair">
+      <img class="thumb" src="grassa.jpg" alt="GRASSA Door">
+      <div class="cap"><span class="label">GRASSA</span><span class="cat">Detail Design</span></div>
+    </a>
+
+    <a class="tile" href="project_maruka.html" title="Maruka / Baby Table">
+      <img class="thumb" src="maruka.jpg" alt="Maruka">
+      <div class="cap"><span class="label">Kissa Maruka</span><span class="cat">Detail Design</span></div>
+    </a>
+
+    <a class="tile" href="project_chair.html" title="This is not a chair">
+      <img class="thumb" src="chair.jpg" alt="Not a Chair">
+      <div class="cap"><span class="label">Not a Chair</span><span class="cat">Detail Design</span></div>
+    </a>
+
+    <!-- Community / Urban Design -->
+    <a class="tile" href="project_christmas.html" title="Christmas Garden / Layout">
+      <img class="thumb" src="christmas.jpg" alt="Christmas Garden">
+      <div class="cap"><span class="label">Christmas Garden</span><span class="cat">Community</span></div>
+    </a>
+
+    <a class="tile" href="project_marathon.html" title="Munakata Marathon">
+      <img class="thumb" src="marathon.jpg" alt="Munakata Marathon">
+      <div class="cap"><span class="label">Munakata Marathon</span><span class="cat">Community</span></div>
+    </a>
+
+    <a class="tile span-2r" href="project_streetfurni.html" title="Hirose en River / Street Furniture">
+      <img class="thumb" src="streetfurni.jpg" alt="Hirose Street Furniture">
+      <div class="cap"><span class="label">Hirose Street Furni.</span><span class="cat">Community</span></div>
+    </a>
+
+    <a class="tile" href="project_terrace.html" title="DIY Terrace">
+      <img class="thumb" src="terrace.jpg" alt="DIY Terrace">
+      <div class="cap"><span class="label">DIY Terrace</span><span class="cat">Community</span></div>
+    </a>
   </main>
 
   <footer>
-    <p>&copy; 2025 munazou</p>
+    © 2025 munazou — images & project pages are placeholders. Replace file names as you upload.
   </footer>
 </body>
 </html>
