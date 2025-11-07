@@ -36,7 +36,7 @@
     @media (min-width:1024px){ .grid{grid-template-columns: repeat(3, 1fr);} }
 
     .card{overflow:hidden; border-radius: var(--br); background:var(--card); border:1px solid var(--line); box-shadow: 0 8px 22px rgba(0,0,0,.06); text-decoration:none; color:inherit; display:flex; flex-direction:column}
-    .thumb{width:100%; height:220px; object-fit:cover}
+    .thumb{width:100%; aspect-ratio:16 / 9; object-fit:cover}
     .card-body{padding:14px}
     .card-title{margin:0; font:600 15px 'Noto Sans JP', sans-serif; color:var(--navy)}
     .card-desc{margin:6px 0 0; font-size:13px; color:var(--muted); line-height:1.5}
@@ -47,10 +47,11 @@
 <body>
   <header>
     <div class="bar">
-      <p class="brand">ムナカタマサヒコのポートフォリオ</p>
+      <p class="brand">munazou</p>
       <nav>
         <a href="index.html">Works</a>
         <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -63,7 +64,8 @@
     </div>
     <div class="hero-title">
       <div class="hero-badge">
-        <h1>ムナカタマサヒコのポートフォリオ</h1>
+        <h1>Munakata Masahiko Portfolio</h1>
+        <p>Architecture / Alternative Architecture / Works</p>
       </div>
     </div>
   </section>
@@ -72,7 +74,7 @@
     <div class="grid">
       <!-- Shop Cafe Qu -->
       <a class="card" href="project_qu.html">
-        <img class="thumb" src="img/project_qu.jpg" alt="Shop Cafe Qu">
+        <img class="thumb" src="img/qu_thumb.jpg" alt="Shop Cafe Qu">
         <div class="card-body">
           <h3 class="card-title">Shop Cafe Qu</h3>
           <p class="card-desc">道の駅まえばし赤城に併設されたカフェ。地域性を活かした温かな空間。</p>
@@ -81,7 +83,7 @@
 
       <!-- Private Gym HOOP -->
       <a class="card" href="project_hoop.html">
-        <img class="thumb" src="img/project_hoop.jpg" alt="Private Gym HOOP">
+        <img class="thumb" src="img/hoop_thumb.jpg" alt="Private Gym HOOP">
         <div class="card-body">
           <h3 class="card-title">Private Gym HOOP</h3>
           <p class="card-desc">個人トレーニングのためのジム空間。集中と解放感を両立。</p>
@@ -90,7 +92,7 @@
 
       <!-- 01production -->
       <a class="card" href="project_01production.html">
-        <img class="thumb" src="img/project_01production.jpg" alt="01production">
+        <img class="thumb" src="img/01prod_thumb.jpg" alt="01production">
         <div class="card-body">
           <h3 class="card-title">01production</h3>
           <p class="card-desc">代々木体育館イベントスペース。演出と建築を融合した提案。</p>
@@ -99,16 +101,16 @@
 
       <!-- Nownever Office Proposal -->
       <a class="card" href="project_nownever_office.html">
-        <img class="thumb" src="img/nownever_office.jpg" alt="Nownever Office">
+        <img class="thumb" src="img/nownever_office_thumb.jpg" alt="Nownever Office">
         <div class="card-body">
           <h3 class="card-title">Nownever Office</h3>
           <p class="card-desc">オフィス空間の提案。人が集い、柔軟に使えるデザイン。</p>
         </div>
       </a>
 
-      <!-- Nownever Floor -->
+      <!-- Nownever Floor（とりあえず同じサムネを流用） -->
       <a class="card" href="project_nownever_floor.html">
-        <img class="thumb" src="img/nownever_floor.jpg" alt="Nownever Floor">
+        <img class="thumb" src="img/nownever_office_thumb.jpg" alt="Nownever Floor">
         <div class="card-body">
           <h3 class="card-title">Nownever / Floor</h3>
           <p class="card-desc">Nownever事務所の床施工。素材感と空間性を両立。</p>
@@ -117,14 +119,14 @@
 
       <!-- Laught Coffee -->
       <a class="card" href="project_laughtcoffee.html">
-        <img class="thumb" src="img/laughtcoffee.jpg" alt="Laught Coffee">
+        <img class="thumb" src="img/laught_thumb.jpg" alt="Laught Coffee">
         <div class="card-body">
           <h3 class="card-title">Laught Coffee</h3>
           <p class="card-desc">トイレ空間の改修提案。小規模空間の質感を高める試み。</p>
         </div>
       </a>
 
-      <!-- Takasaki Renovation -->
+      <!-- Takasaki Renovation（thumb名がまだ分からないのでそのまま） -->
       <a class="card" href="project_takasaki.html">
         <img class="thumb" src="img/takasaki.jpg" alt="Takasaki Renovation">
         <div class="card-body">
@@ -135,7 +137,7 @@
 
       <!-- Sake Brewery Sauna -->
       <a class="card" href="project_kurasauna.html">
-        <img class="thumb" src="img/kurasauna.jpg" alt="Sake Brewery Sauna">
+        <img class="thumb" src="img/kurasauna_thumb.jpg" alt="Sake Brewery Sauna">
         <div class="card-body">
           <h3 class="card-title">Sake Brewery Sauna</h3>
           <p class="card-desc">酒蔵をサウナにリノベする提案。地域資源を活かす計画。</p>
@@ -144,14 +146,14 @@
 
       <!-- Christmas Garden -->
       <a class="card" href="project_christmas.html">
-        <img class="thumb" src="img/christmas.jpg" alt="Christmas Garden">
+        <img class="thumb" src="img/christmas_thumb.jpg" alt="Christmas Garden">
         <div class="card-body">
           <h3 class="card-title">Christmas Garden</h3>
           <p class="card-desc">群馬県庁前でのイベント。季節感と空間演出の実験。</p>
         </div>
       </a>
 
-      <!-- Munakata Marathon -->
+      <!-- Munakata Marathon（こちらもファイル名がまだ不明なのでそのまま） -->
       <a class="card" href="project_marathon.html">
         <img class="thumb" src="img/marathon.jpg" alt="Munakata Marathon">
         <div class="card-body">
@@ -162,7 +164,7 @@
 
       <!-- DIY Terrace -->
       <a class="card" href="project_terrace.html">
-        <img class="thumb" src="img/terrace.jpg" alt="DIY Terrace">
+        <img class="thumb" src="img/terrace_thumb.jpg" alt="DIY Terrace">
         <div class="card-body">
           <h3 class="card-title">DIY Terrace</h3>
           <p class="card-desc">木材と鋼製束を使ったDIYテラス制作。暮らしの拡張。</p>
@@ -171,7 +173,7 @@
 
       <!-- Not a Chair -->
       <a class="card" href="project_chair.html">
-        <img class="thumb" src="img/chair.jpg" alt="Not a Chair">
+        <img class="thumb" src="img/chair_thumb.jpg" alt="Not a Chair">
         <div class="card-body">
           <h3 class="card-title">Not a Chair</h3>
           <p class="card-desc">「これは椅子ではない」シリーズ。家具とアートの境界を探る。</p>
@@ -180,7 +182,7 @@
 
       <!-- Hirose Street Furniture -->
       <a class="card" href="project_streetfurni.html">
-        <img class="thumb" src="img/streetfurni.jpg" alt="Hirose Street Furniture">
+        <img class="thumb" src="img/streetfurni_thumb.jpg" alt="Hirose Street Furniture">
         <div class="card-body">
           <h3 class="card-title">Hirose Street Furniture</h3>
           <p class="card-desc">広瀬川を舞台にしたストリートファーニチャー。公共空間の可能性。</p>
@@ -189,7 +191,7 @@
 
       <!-- GRASSA -->
       <a class="card" href="project_grassa.html">
-        <img class="thumb" src="img/grassa.jpg" alt="GRASSA">
+        <img class="thumb" src="img/grassa_thumb.jpg" alt="GRASSA">
         <div class="card-body">
           <h3 class="card-title">GRASSA</h3>
           <p class="card-desc">回転扉の修繕プロジェクト。小規模改修の積み重ね。</p>
@@ -198,7 +200,7 @@
 
       <!-- Kissa Maruka -->
       <a class="card" href="project_maruka.html">
-        <img class="thumb" src="img/maruka.jpg" alt="Kissa Maruka">
+        <img class="thumb" src="img/maruka_thumb.jpg" alt="Kissa Maruka">
         <div class="card-body">
           <h3 class="card-title">Kissa Maruka</h3>
           <p class="card-desc">喫茶店のためのおむつ台制作。日常生活に寄り添う小さな建築。</p>
@@ -207,7 +209,7 @@
 
       <!-- Window Pocket -->
       <a class="card" href="project_pocket.html">
-        <img class="thumb" src="img/pocket.jpg" alt="Window Pocket">
+        <img class="thumb" src="img/pocket_thumb.jpg" alt="Window Pocket">
         <div class="card-body">
           <h3 class="card-title">Window Pocket</h3>
           <p class="card-desc">マンションリノベーションコンペ提案。居住空間に新しい余白を。</p>
