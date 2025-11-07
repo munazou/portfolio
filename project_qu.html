@@ -12,30 +12,35 @@
       --line:#e7e9ee; --navy:#163a5f; --br:16px;
     }
     *{box-sizing:border-box}
-    body{margin:0; color:var(--ink); background: var(--bg); font-family: 'Noto Sans JP', sans-serif;}
+    body{
+      margin:0;
+      color:var(--ink);
+      background: var(--bg);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
 
     header{
       position:sticky; top:0; z-index:50;
       background: rgba(247,248,250,.9);
       backdrop-filter: blur(8px);
-      border-bottom:1px solid var(--line)
+      border-bottom:1px solid var(--line);
     }
     .bar{
       max-width:1200px; margin:0 auto;
       display:flex; align-items:center;
-      gap:16px; padding:14px 20px
+      gap:16px; padding:14px 20px;
     }
     .brand{
       margin:0; font-size:22px;
       font-family:"YuMincho", serif;
-      letter-spacing:.06em; color:var(--navy)
+      letter-spacing:.06em; color:var(--navy);
     }
-    nav{margin-left:auto; display:flex; gap:18px}
+    nav{margin-left:auto; display:flex; gap:18px;}
     nav a{
       color:var(--muted); text-decoration:none;
       font:600 13px 'IBM Plex Mono', monospace;
     }
-    nav a:hover{color:var(--navy)}
+    nav a:hover{color:var(--navy);}
 
     main{
       max-width:1100px;
@@ -52,7 +57,7 @@
       gap:6px;
       margin-bottom:16px;
     }
-    .back-link:hover{color:var(--navy)}
+    .back-link:hover{color:var(--navy);}
 
     h1{
       margin:0 0 8px;
@@ -67,14 +72,15 @@
       margin-bottom:20px;
     }
 
+    /* ★メイン画像：比率を固定せず、そのまま表示 */
     .hero-img{
       width:100%;
-      aspect-ratio:16 / 9;
+      height:auto;
       border-radius:var(--br);
-      object-fit:cover;
       border:1px solid var(--line);
       background:#ddd;
       margin-bottom:20px;
+      display:block;
     }
 
     .layout{
@@ -108,13 +114,15 @@
       gap:14px;
       margin-top:10px;
     }
+    /* ★サブ写真も比率固定しない */
     .thumb-grid img{
       width:100%;
-      aspect-ratio:16/9;
-      object-fit:cover;
+      height:auto;
+      object-fit:contain;
       border-radius:12px;
       border:1px solid var(--line);
       background:#ddd;
+      display:block;
     }
 
     footer{
@@ -147,8 +155,8 @@
       Role: Design / Coordination（インターンとして担当）
     </p>
 
-    <!-- ★ここを自分のメイン画像に差し替え -->
-    <img class="hero-img" src="img/qu_1.jpg.jpg" alt="Shop Cafe Qu main image">
+    <!-- ★メインページと同じサムネイルを一番上に -->
+    <img class="hero-img" src="img/qu_thumb.jpg.JPG" alt="Shop Cafe Qu main image">
 
     <div class="layout">
       <!-- 左：テキスト説明 -->
@@ -180,11 +188,11 @@
       <div>
         <p class="section-title">PHOTOS</p>
         <div class="thumb-grid">
-          <!-- ★ここも自分のファイル名に合わせて差し替え -->
-          <img src="img/qu_2.jpg.jpg" alt="Shop Cafe Qu view 1">
-          <img src="img/qu_3.jpg.HEIC" alt="Shop Cafe Qu view 2">
-          <img src="img/qu_5.jpg.jpg" alt="Shop Cafe Qu view 3">
-          <img src="img/qu_6.jpg.jpg" alt="Shop Cafe Qu view 4">
+          <img src="img/qu_1.jpg.jpg" alt="Shop Cafe Qu view 1">
+          <img src="img/qu_2.jpg.jpg" alt="Shop Cafe Qu view 2">
+          <img src="img/qu_3.jpg.HEIC" alt="Shop Cafe Qu view 3">
+          <img src="img/qu_5.jpg.jpg" alt="Shop Cafe Qu view 4">
+          <img src="img/qu_6.jpg.jpg" alt="Shop Cafe Qu view 5">
         </div>
       </div>
     </div>
