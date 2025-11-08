@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIY Terrace | Munakata Masahiko Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family:"YuMincho";
+      src: local("YuMincho"), local("Yu Mincho"), local("游明朝体");
+    }
+    :root{
+      --bg:#f7f8fa; --ink:#111418; --muted:#646a76; --card:#ffffff;
+      --line:#e7e9ee; --navy:#163a5f; --br:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--ink);
+      background: var(--bg);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(247,248,250,.9);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .bar{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center;
+      gap:16px; padding:14px 20px;
+    }
+    .brand{
+      margin:0; font-size:22px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.06em; color:var(--navy);
+    }
+    nav{margin-left:auto; display:flex; gap:18px;}
+    nav a{
+      color:var(--muted); text-decoration:none;
+      font:600 13px 'IBM Plex Mono', monospace;
+    }
+    nav a:hover{color:var(--navy);}
+
+    main{
+      max-width:1100px;
+      margin:28px auto 60px;
+      padding:0 20px 40px;
+    }
+
+    .back-link{
+      font:500 12px 'IBM Plex Mono', monospace;
+      color:var(--muted);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:16px;
+    }
+    .back-link:hover{color:var(--navy);}
+
+    h1{
+      margin:0 0 8px;
+      font-size:24px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.05em;
+      color:var(--navy);
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+
+    .hero-img{
+      width:100%;
+      height:auto;
+      border-radius:var(--br);
+      border:1px solid var(--line);
+      background:#ddd;
+      margin-bottom:20px;
+      display:block;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap:28px;
+    }
+    @media (max-width:900px){
+      .layout{grid-template-columns: 1fr;}
+    }
+
+    .section-title{
+      font-size:14px;
+      font-weight:700;
+      margin:0 0 8px;
+      color:var(--navy);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-family:'IBM Plex Mono', monospace;
+    }
+    .body-text{
+      font-size:14px;
+      line-height:1.8;
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+
+    .thumb-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .thumb-grid img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#ddd;
+      display:block;
+    }
+
+    footer{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px 40px;
+      color:var(--muted);
+      font:500 12px 'IBM Plex Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <p class="brand">munazou</p>
+      <nav>
+        <a href="index.html">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="back-link">← BACK TO WORKS</a>
+
+    <h1>DIY Terrace</h1>
+    <p class="meta">
+      住宅テラス増築 / DIYプロジェクト / 2023<br>
+      Role: Design, Detail, Fabrication
+    </p>
+
+    <!-- メイン：サムネ画像 -->
+    <img class="hero-img" src="img/terrace_thumb.jpg.HEIC" alt="DIY Terrace main image">
+
+    <div class="layout">
+      <!-- 左：テキスト -->
+      <div>
+        <p class="section-title">CONCEPT</p>
+        <p class="body-text">
+          既存の掃き出し窓の外側に、日常の延長として使える「もう一枚の床」を
+          つくるプロジェクト。室内と庭のあいだにワンクッションとなるテラスを
+          設けることで、食事・作業・子どもの遊び場など、暮らしのシーンを柔らかく
+          外へひろげていくことを目指した。
+        </p>
+
+        <p class="section-title">OUTLINE</p>
+        <p class="body-text">
+          ・用途：住宅テラス（アウトドアリビング）<br>
+          ・構造：木造＋鋼製束による簡易基礎<br>
+          ・仕上げ：防腐処理材＋オイル仕上げ<br>
+          ・制作：設計〜材料手配〜施工まで家族・友人とDIY
+        </p>
+
+        <p class="section-title">NOTE</p>
+        <p class="body-text">
+          CADでの割付や納まり検討を行ったうえで、現場では実際の身体スケールと
+          視線の抜け方を確認しながら高さや奥行きを微調整した。完成後は、
+          朝のコーヒーや子どもプール、簡易なBBQなど、多様な使われ方が生まれ、
+          「少し手を加えるだけで暮らしは変わる」という実感を得られたプロジェクト。
+        </p>
+      </div>
+
+      <!-- 右：写真ギャラリー -->
+      <div>
+        <p class="section-title">PHOTOS</p>
+        <div class="thumb-grid">
+          <img src="img/terrace_1.jpg.JPG"  alt="DIY Terrace view 1">
+          <img src="img/terrace_2.jpg.HEIC" alt="DIY Terrace view 2">
+          <img src="img/terrace_3.jpg.HEIC" alt="DIY Terrace view 3">
+          <img src="img/terrace_4.jpg.HEIC" alt="DIY Terrace view 4">
+          <img src="img/terrace_5.jpg.JPG"  alt="DIY Terrace drawing / detail">
+          <!-- 図面用の画像を使いたければテラス.pngも追加OK -->
+          <!-- <img src="img/テラス.png" alt="DIY Terrace plan"> -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Munakata Masahiko
+  </footer>
+</body>
+</html>
