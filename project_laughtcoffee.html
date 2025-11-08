@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laught Coffee | Munakata Masahiko Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family:"YuMincho"; src: local("YuMincho"), local("Yu Mincho"), local("游明朝体"); }
+    :root{
+      --bg:#f7f8fa; --ink:#111418; --muted:#646a76; --card:#ffffff;
+      --line:#e7e9ee; --navy:#163a5f; --br:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--ink);
+      background: var(--bg);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(247,248,250,.9);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .bar{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center;
+      gap:16px; padding:14px 20px;
+    }
+    .brand{
+      margin:0; font-size:22px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.06em; color:var(--navy);
+    }
+    nav{margin-left:auto; display:flex; gap:18px;}
+    nav a{
+      color:var(--muted); text-decoration:none;
+      font:600 13px 'IBM Plex Mono', monospace;
+    }
+    nav a:hover{color:var(--navy);}
+
+    main{
+      max-width:1100px;
+      margin:28px auto 60px;
+      padding:0 20px 40px;
+    }
+
+    .back-link{
+      font:500 12px 'IBM Plex Mono', monospace;
+      color:var(--muted);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:16px;
+    }
+    .back-link:hover{color:var(--navy);}
+
+    h1{
+      margin:0 0 8px;
+      font-size:24px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.05em;
+      color:var(--navy);
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+
+    /* 詳細ページは画像の比率そのまま */
+    .hero-img{
+      width:100%;
+      height:auto;
+      border-radius:var(--br);
+      border:1px solid var(--line);
+      background:#ddd;
+      margin-bottom:20px;
+      display:block;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap:28px;
+    }
+    @media (max-width:900px){
+      .layout{grid-template-columns: 1fr; }
+    }
+
+    .section-title{
+      font-size:14px;
+      font-weight:700;
+      margin:0 0 8px;
+      color:var(--navy);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-family:'IBM Plex Mono', monospace;
+    }
+    .body-text{
+      font-size:14px;
+      line-height:1.8;
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+
+    .thumb-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .thumb-grid img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#ddd;
+      display:block;
+    }
+
+    footer{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px 40px;
+      color:var(--muted);
+      font:500 12px 'IBM Plex Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <p class="brand">munazou</p>
+      <nav>
+        <a href="index.html">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="back-link">← BACK TO WORKS</a>
+
+    <h1>Laught Coffee – Restroom Renovation</h1>
+    <p class="meta">
+      カフェトイレ改修 / 内装・ディテール / 2023<br>
+      Role: Design, Construction Support
+    </p>
+
+    <!-- メインページと同じサムネを一番上に -->
+    <img class="hero-img" src="img/laught_thumb.jpg.png" alt="Laught Coffee main image">
+
+    <div class="layout">
+      <!-- 左：テキスト -->
+      <div>
+        <p class="section-title">CONCEPT</p>
+        <p class="body-text">
+          小さなトイレ空間を、店の世界観をぎゅっと凝縮した
+          「もう一つの小さな客席」のように感じられる場所へと更新する計画。
+          既存の器具は活かしつつ、壁・天井・照明のバランスを整え、
+          入った瞬間に少しだけ気持ちが整うようなトーンを目指した。
+        </p>
+
+        <p class="section-title">OUTLINE</p>
+        <p class="body-text">
+          ・用途：カフェトイレの改修<br>
+          ・規模：内装・仕上げ更新、簡易造作<br>
+          ・担当：色彩計画 / 仕上げ選定 / 施工サポート / 記録撮影 など
+        </p>
+
+        <p class="section-title">NOTE</p>
+        <p class="body-text">
+          限られた面積の中でどこまで空間の印象を変えられるかを、
+          塗装と照明の組み合わせで検証したプロジェクト。
+          既存の建具や設備を尊重しながら、少しだけ大胆な色を差し込むことで、
+          店全体とのつながりと、トイレならではの特別感の両方を意識している。
+        </p>
+      </div>
+
+      <!-- 右：写真ギャラリー -->
+      <div>
+        <p class="section-title">PHOTOS</p>
+        <div class="thumb-grid">
+          <img src="img/laught_1.jpg.png" alt="Laught Coffee view 1">
+          <img src="img/laught_2.jpg.HEIC" alt="Laught Coffee view 2">
+          <img src="img/laught_3.jpg.JPG" alt="Laught Coffee view 3">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Munakata Masahiko
+  </footer>
+</body>
+</html>
