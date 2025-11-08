@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mousou Banpaku | Munakata Masahiko Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family:"YuMincho"; src: local("YuMincho"), local("Yu Mincho"), local("游明朝体"); }
+    :root{
+      --bg:#f7f8fa; --ink:#111418; --muted:#646a76; --card:#ffffff;
+      --line:#e7e9ee; --navy:#163a5f; --br:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; color:var(--ink); background: var(--bg); font-family: 'Noto Sans JP', sans-serif;}
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(247,248,250,.9);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line)
+    }
+    .bar{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center;
+      gap:16px; padding:14px 20px
+    }
+    .brand{
+      margin:0; font-size:22px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.06em; color:var(--navy)
+    }
+    nav{margin-left:auto; display:flex; gap:18px}
+    nav a{
+      color:var(--muted); text-decoration:none;
+      font:600 13px 'IBM Plex Mono', monospace;
+    }
+    nav a:hover{color:var(--navy)}
+
+    main{
+      max-width:1100px;
+      margin:28px auto 60px;
+      padding:0 20px 40px;
+    }
+
+    .back-link{
+      font:500 12px 'IBM Plex Mono', monospace;
+      color:var(--muted);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:16px;
+    }
+    .back-link:hover{color:var(--navy)}
+
+    h1{
+      margin:0 0 8px;
+      font-size:24px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.05em;
+      color:var(--navy);
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+
+    .hero-img{
+      width:100%;
+      border-radius:var(--br);
+      object-fit:cover;
+      border:1px solid var(--line);
+      background:#ddd;
+      margin-bottom:20px;
+      display:block;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap:28px;
+    }
+    @media (max-width:900px){
+      .layout{grid-template-columns: 1fr; }
+    }
+
+    .section-title{
+      font-size:14px;
+      font-weight:700;
+      margin:0 0 8px;
+      color:var(--navy);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-family:'IBM Plex Mono', monospace;
+    }
+    .body-text{
+      font-size:14px;
+      line-height:1.8;
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+
+    .thumb-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .thumb-grid img{
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#ddd;
+      display:block;
+    }
+
+    footer{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px 40px;
+      color:var(--muted);
+      font:500 12px 'IBM Plex Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <p class="brand">munazou</p>
+      <nav>
+        <a href="index.html">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="back-link">← BACK TO WORKS</a>
+
+    <h1>妄想万博（Mousou Banpaku）</h1>
+    <p class="meta">
+      前橋市 / アートインスタレーション / 2023<br>
+      Role: Concept / Design / Model / Exhibition
+    </p>
+
+    <img class="hero-img" src="img/mousoubanpaku_thumb.jpg.jpg" alt="Mousou Banpaku main image">
+
+    <div class="layout">
+      <div>
+        <p class="section-title">CONCEPT</p>
+        <p class="body-text">
+          「もしも自分の中に世界があるとしたら？」という妄想から始まった小さな万博。
+          現実と空想のあいだにある“装置”をテーマに、家具・建築・インスタレーションを横断しながら、
+          日常に潜む「発見の芽」を立ち上げる試み。
+          会場内では、観客自身の想像を引き出すための模型・映像・音が展示された。
+        </p>
+
+        <p class="section-title">OUTLINE</p>
+        <p class="body-text">
+          ・会場：群馬県 前橋市 広瀬川周辺<br>
+          ・形式：アートインスタレーション展示（共同制作）<br>
+          ・内容：構想・模型制作・展示構成・記録撮影<br>
+          ・担当：コンセプト立案／展示デザイン／模型ディレクション
+        </p>
+
+        <p class="section-title">NOTE</p>
+        <p class="body-text">
+          建築を“展示”として見せることで、用途や機能に縛られない空間の可能性を探った。
+          「椅子になりきれない椅子」「意味を脱いだ道具」など、
+          形態と思考の中間にある存在を、遊び心と哲学のあいだで再構築している。
+        </p>
+      </div>
+
+      <div>
+        <p class="section-title">PHOTOS / MODELS</p>
+        <div class="thumb-grid">
+          <img src="img/mousoubanpaku_1.jpg.jpg" alt="Mousou Banpaku photo 1">
+          <img src="img/mousoubanpaku_2.jpg.jpg" alt="Mousou Banpaku photo 2">
+          <img src="img/mousoubanpaku_3.jpg.jpg" alt="Mousou Banpaku photo 3">
+          <img src="img/mousoubanpaku_4.jpg.jpg" alt="Mousou Banpaku photo 4">
+          <img src="img/mousoubanpaku_5.jpg.jpg" alt="Mousou Banpaku photo 5">
+          <img src="img/mousoubanpaku_6.jpg.jpg" alt="Mousou Banpaku photo 6">
+          <img src="img/mousoubanpaku_7.jpg.jpg" alt="Mousou Banpaku photo 7">
+          <img src="img/mousoubanpaku_8.jpg.jpg" alt="Mousou Banpaku photo 8">
+          <img src="img/mousoubanpaku_9.jpg.jpg" alt="Mousou Banpaku photo 9">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Munakata Masahiko
+  </footer>
+</body>
+</html>
