@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hirosegawa Genpei | Munakata Masahiko Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family:"YuMincho"; src: local("YuMincho"), local("Yu Mincho"), local("游明朝体"); }
+    :root{
+      --bg:#f7f8fa; --ink:#111418; --muted:#646a76; --card:#ffffff;
+      --line:#e7e9ee; --navy:#163a5f; --br:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--ink);
+      background: var(--bg);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(247,248,250,.9);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .bar{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center;
+      gap:16px; padding:14px 20px;
+    }
+    .brand{
+      margin:0; font-size:22px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.06em; color:var(--navy);
+    }
+    nav{margin-left:auto; display:flex; gap:18px}
+    nav a{
+      color:var(--muted); text-decoration:none;
+      font:600 13px 'IBM Plex Mono', monospace;
+    }
+    nav a:hover{color:var(--navy)}
+
+    main{
+      max-width:1100px;
+      margin:28px auto 60px;
+      padding:0 20px 40px;
+    }
+
+    .back-link{
+      font:500 12px 'IBM Plex Mono', monospace;
+      color:var(--muted);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:16px;
+    }
+    .back-link:hover{color:var(--navy)}
+
+    h1{
+      margin:0 0 8px;
+      font-size:24px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.05em;
+      color:var(--navy);
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+
+    .hero-img{
+      width:100%;
+      height:auto;
+      border-radius:var(--br);
+      object-fit:cover;
+      border:1px solid var(--line);
+      background:#ddd;
+      margin-bottom:20px;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap:28px;
+    }
+    @media (max-width:900px){
+      .layout{grid-template-columns: 1fr;}
+    }
+
+    .section-title{
+      font-size:14px;
+      font-weight:700;
+      margin:0 0 8px;
+      color:var(--navy);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-family:'IBM Plex Mono', monospace;
+    }
+    .body-text{
+      font-size:14px;
+      line-height:1.8;
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+
+    .thumb-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .thumb-grid img{
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#ddd;
+    }
+
+    footer{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px 40px;
+      color:var(--muted);
+      font:500 12px 'IBM Plex Mono', monospace;
+    }
+
+    video{
+      width:100%;
+      border-radius:var(--br);
+      border:1px solid var(--line);
+      margin-top:14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <p class="brand">munazou</p>
+      <nav>
+        <a href="index.html">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="back-link">← BACK TO WORKS</a>
+
+    <h1>広瀬川源平エリア社会実験（Hirosegawa Genpei）</h1>
+    <p class="meta">
+      前橋市 / 都市空間デザイン・社会実験 / 2024<br>
+      Role: Layout Planning / Installation / Video Production
+    </p>
+
+    <img class="hero-img" src="img/hirosegawagenpei_thumb.jpg.HEIC" alt="Hirosegawa Genpei main image">
+
+    <div class="layout">
+      <div>
+        <p class="section-title">CONCEPT</p>
+        <p class="body-text">
+          広瀬川と市街地のあいだにある「源平エリア」で行われた社会実験。
+          歩行者動線や滞在スペースを再編し、人が自然に集まり、滞在できる川辺のデザインを検証した。
+          通行量の多い道路と静かな水辺をつなぐことで、まちの中に“もうひとつのリビング”を生み出している。
+        </p>
+
+        <p class="section-title">OUTLINE</p>
+        <p class="body-text">
+          ・所在地：群馬県 前橋市 広瀬川源平エリア<br>
+          ・内容：社会実験／ファニチャー設置／レイアウト検討／映像制作<br>
+          ・期間：2024年 夏季<br>
+          ・担当：現地調査・設営支援・記録映像
+        </p>
+
+        <p class="section-title">NOTE</p>
+        <p class="body-text">
+          現場のレベル差や段差を活かして、川沿いの動線を多層的に構成。
+          休憩・通行・視線といった行為を重ね合わせることで、単なる通路を“滞在する道”へと変化させている。
+          記録映像では、実際の人の流れと時間の変化を観察し、都市の“間”に生まれる新しい活動を記録した。
+        </p>
+      </div>
+
+      <div>
+        <p class="section-title">PHOTOS / VIDEO</p>
+        <div class="thumb-grid">
+          <img src="img/hirosegawagenpei_1.jpg.HEIC" alt="Hirosegawa Genpei photo 1">
+          <img src="img/hirosegawagenpei_2.jpg.HEIC" alt="Hirosegawa Genpei photo 2">
+        </div>
+        <video controls>
+          <source src="img/hirosegawagenpei_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Munakata Masahiko
+  </footer>
+</body>
+</html>
