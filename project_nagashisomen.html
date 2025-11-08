@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nagashi Somen | Munakata Masahiko Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family:"YuMincho"; src: local("YuMincho"), local("Yu Mincho"), local("游明朝体"); }
+    :root{
+      --bg:#f7f8fa; --ink:#111418; --muted:#646a76; --card:#ffffff;
+      --line:#e7e9ee; --navy:#163a5f; --br:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--ink);
+      background: var(--bg);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(247,248,250,.9);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .bar{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center;
+      gap:16px; padding:14px 20px;
+    }
+    .brand{
+      margin:0; font-size:22px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.06em; color:var(--navy);
+    }
+    nav{margin-left:auto; display:flex; gap:18px}
+    nav a{
+      color:var(--muted); text-decoration:none;
+      font:600 13px 'IBM Plex Mono', monospace;
+    }
+    nav a:hover{color:var(--navy)}
+
+    main{
+      max-width:1100px;
+      margin:28px auto 60px;
+      padding:0 20px 40px;
+    }
+
+    .back-link{
+      font:500 12px 'IBM Plex Mono', monospace;
+      color:var(--muted);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:16px;
+    }
+    .back-link:hover{color:var(--navy)}
+
+    h1{
+      margin:0 0 8px;
+      font-size:24px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.05em;
+      color:var(--navy);
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+
+    .hero-img{
+      width:100%;
+      height:auto;
+      border-radius:var(--br);
+      object-fit:cover;
+      border:1px solid var(--line);
+      background:#ddd;
+      margin-bottom:20px;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap:28px;
+    }
+    @media (max-width:900px){
+      .layout{grid-template-columns: 1fr;}
+    }
+
+    .section-title{
+      font-size:14px;
+      font-weight:700;
+      margin:0 0 8px;
+      color:var(--navy);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-family:'IBM Plex Mono', monospace;
+    }
+    .body-text{
+      font-size:14px;
+      line-height:1.8;
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+
+    .thumb-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .thumb-grid img{
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#ddd;
+    }
+
+    footer{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px 40px;
+      color:var(--muted);
+      font:500 12px 'IBM Plex Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <p class="brand">munazou</p>
+      <nav>
+        <a href="index.html">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="back-link">← BACK TO WORKS</a>
+
+    <h1>流しそうめんプロジェクト</h1>
+    <p class="meta">
+      群馬県前橋市 / 家族イベント・空間演出 / 2024<br>
+      Role: Design / Fabrication / Coordination / Photography
+    </p>
+
+    <img class="hero-img" src="img/nagasisoumen_thumb.jpg.jpg" alt="Nagashi Somen main image">
+
+    <div class="layout">
+      <div>
+        <p class="section-title">CONCEPT</p>
+        <p class="body-text">
+          家族と地域のつながりをテーマにした、屋外での流しそうめんイベント。
+          手づくりの竹樋と木製構造による即興的な会場設計で、子どもから大人までが一緒に楽しめる時間をデザインした。
+          単なる「食の場」ではなく、“流れる”という行為を通して人の動きや笑顔が交錯するコミュニケーション空間を目指した。
+        </p>
+
+        <p class="section-title">OUTLINE</p>
+        <p class="body-text">
+          ・開催地：群馬県 前橋市 富士見町<br>
+          ・内容：竹樋製作・空間構成・食イベント運営<br>
+          ・協力：家族・地域の友人たち<br>
+          ・実施時期：2024年 夏季
+        </p>
+
+        <p class="section-title">NOTE</p>
+        <p class="body-text">
+          イベントでは、竹の長さや角度をその場で微調整しながら設営。
+          参加者が自然と手を動かし、笑いながら完成させていく過程も一つの作品として位置づけた。
+          終了後は竹を再利用し、庭の素材として循環利用した。
+        </p>
+      </div>
+
+      <div>
+        <p class="section-title">PHOTOS</p>
+        <div class="thumb-grid">
+          <img src="img/nagasisoumen_1.jpg.jpg" alt="Nagashi Somen photo 1">
+          <img src="img/nagasisoumen_2.jpg.jpg" alt="Nagashi Somen photo 2">
+          <img src="img/nagasisoumen_3.jpg.jpg" alt="Nagashi Somen photo 3">
+          <img src="img/nagasisoumen_4.jpg.jpg" alt="Nagashi Somen photo 4">
+          <img src="img/nagasisoumen_5.jpg.JPG" alt="Nagashi Somen photo 5">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Munakata Masahiko
+  </footer>
+</body>
+</html>
