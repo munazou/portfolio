@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ESPER Urbanism | Munakata Masahiko Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family:"YuMincho";
+      src: local("YuMincho"), local("Yu Mincho"), local("游明朝体");
+    }
+    :root{
+      --bg:#f7f8fa; --ink:#111418; --muted:#646a76; --card:#ffffff;
+      --line:#e7e9ee; --navy:#163a5f; --br:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--ink);
+      background: var(--bg);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(247,248,250,.9);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .bar{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center;
+      gap:16px; padding:14px 20px;
+    }
+    .brand{
+      margin:0; font-size:22px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.06em; color:var(--navy);
+    }
+    nav{margin-left:auto; display:flex; gap:18px;}
+    nav a{
+      color:var(--muted); text-decoration:none;
+      font:600 13px 'IBM Plex Mono', monospace;
+    }
+    nav a:hover{color:var(--navy);}
+
+    main{
+      max-width:1100px;
+      margin:28px auto 60px;
+      padding:0 20px 40px;
+    }
+
+    .back-link{
+      font:500 12px 'IBM Plex Mono', monospace;
+      color:var(--muted);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:16px;
+    }
+    .back-link:hover{color:var(--navy);}
+
+    h1{
+      margin:0 0 8px;
+      font-size:24px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.05em;
+      color:var(--navy);
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+
+    /* 詳細ページは画像比率そのまま */
+    .hero-img{
+      width:100%;
+      height:auto;
+      border-radius:var(--br);
+      border:1px solid var(--line);
+      background:#ddd;
+      margin-bottom:20px;
+      display:block;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap:28px;
+    }
+    @media (max-width:900px){
+      .layout{grid-template-columns: 1fr; }
+    }
+
+    .section-title{
+      font-size:14px;
+      font-weight:700;
+      margin:0 0 8px;
+      color:var(--navy);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-family:'IBM Plex Mono', monospace;
+    }
+    .body-text{
+      font-size:14px;
+      line-height:1.8;
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+
+    .thumb-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .thumb-grid img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#ddd;
+      display:block;
+    }
+
+    footer{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px 40px;
+      color:var(--muted);
+      font:500 12px 'IBM Plex Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <p class="brand">munazou</p>
+      <nav>
+        <a href="index.html">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="back-link">← BACK TO WORKS</a>
+
+    <h1>ESPER Urbanism</h1>
+    <p class="meta">
+      都市リサーチ &amp; 住宅提案 / スタディモデル / 20XX<br>
+      Role: Concept Making, Drawing, Model, Visualization
+    </p>
+
+    <!-- 一覧で使っているサムネイルをメインに -->
+    <img class="hero-img" src="img/esper_thumb.jpg.jpg" alt="ESPER Urbanism main image">
+
+    <div class="layout">
+      <!-- 左：テキストエリア -->
+      <div>
+        <p class="section-title">CONCEPT</p>
+        <p class="body-text">
+          既存の都市構造の中に埋もれている「余白」を拾い上げ、
+          そこに暮らしや小さな経済活動を挿し込んでいくことで、
+          まちを少しずつ書き換えていくことをテーマにしたプロジェクト。
+          グラフィック、模型、断面図など複数のメディアを横断しながら、
+          住まいと都市の関係を再編集している。
+        </p>
+
+        <p class="section-title">OUTLINE</p>
+        <p class="body-text">
+          ・対象：地方都市の中心市街地<br>
+          ・内容：リサーチ / マスタープラン / 住宅・店舗の提案<br>
+          ・表現：冊子・模型・パネル・パース などを組み合わせた展示構成
+        </p>
+
+        <p class="section-title">NOTE</p>
+        <p class="body-text">
+          図面だけでなく、冊子や展示レイアウトまで一貫してデザインすることで、
+          アイデアそのものだけでなく「どう伝わるか」まで含めて設計した。
+          まちのスケールと生活者のスケールを行き来しながら、
+          生活の手触りを保ったまま都市を更新していく方法を探っている。
+        </p>
+      </div>
+
+      <!-- 右：写真ギャラリー -->
+      <div>
+        <p class="section-title">PHOTOS & DRAWINGS</p>
+        <div class="thumb-grid">
+          <img src="img/esper_1.jpg.HEIC" alt="ESPER book & cover">
+          <img src="img/esper_2.jpg.HEIC" alt="ESPER booklet spread">
+          <img src="img/esper_3.jpg.HEIC" alt="ESPER model 1">
+          <img src="img/esper_4.jpg.PNG"  alt="ESPER drawing 1">
+          <img src="img/esper_5.jpg.PNG"  alt="ESPER drawing 2">
+          <img src="img/esper_6.jpg.PNG"  alt="ESPER drawing 3">
+          <img src="img/esper_7.jpg.png"  alt="ESPER perspective 1">
+          <img src="img/esper_8.jpg.png"  alt="ESPER perspective 2">
+          <img src="img/esper_9.jpg.png"  alt="ESPER interior view">
+          <img src="img/esper_10.jpg.png" alt="ESPER detail 1">
+          <img src="img/esper_11.jpg.png" alt="ESPER detail 2">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Munakata Masahiko
+  </footer>
+</body>
+</html>
