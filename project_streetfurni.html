@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not a Chair | Munakata Masahiko Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family:"YuMincho"; src: local("YuMincho"), local("Yu Mincho"), local("游明朝体"); }
+    :root{
+      --bg:#f7f8fa; --ink:#111418; --muted:#646a76; --card:#ffffff;
+      --line:#e7e9ee; --navy:#163a5f; --br:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; color:var(--ink); background: var(--bg); font-family: 'Noto Sans JP', sans-serif;}
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(247,248,250,.9);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line)
+    }
+    .bar{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center;
+      gap:16px; padding:14px 20px
+    }
+    .brand{
+      margin:0; font-size:22px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.06em; color:var(--navy)
+    }
+    nav{margin-left:auto; display:flex; gap:18px}
+    nav a{
+      color:var(--muted); text-decoration:none;
+      font:600 13px 'IBM Plex Mono', monospace;
+    }
+    nav a:hover{color:var(--navy)}
+
+    main{
+      max-width:1100px;
+      margin:28px auto 60px;
+      padding:0 20px 40px;
+    }
+
+    .back-link{
+      font:500 12px 'IBM Plex Mono', monospace;
+      color:var(--muted);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:16px;
+    }
+    .back-link:hover{color:var(--navy)}
+
+    h1{
+      margin:0 0 8px;
+      font-size:24px;
+      font-family:"YuMincho", serif;
+      letter-spacing:.05em;
+      color:var(--navy);
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+
+    /* 16:9固定はやめて、そのままの比率を表示 */
+    .hero-img{
+      width:100%;
+      border-radius:var(--br);
+      object-fit:cover;
+      border:1px solid var(--line);
+      background:#ddd;
+      margin-bottom:20px;
+      display:block;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap:28px;
+    }
+    @media (max-width:900px){
+      .layout{grid-template-columns: 1fr; }
+    }
+
+    .section-title{
+      font-size:14px;
+      font-weight:700;
+      margin:0 0 8px;
+      color:var(--navy);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-family:'IBM Plex Mono', monospace;
+    }
+    .body-text{
+      font-size:14px;
+      line-height:1.8;
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+
+    .thumb-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .thumb-grid img{
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#ddd;
+      display:block;
+    }
+
+    footer{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px 40px;
+      color:var(--muted);
+      font:500 12px 'IBM Plex Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <p class="brand">munazou</p>
+      <nav>
+        <a href="index.html">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="back-link">← BACK TO WORKS</a>
+
+    <h1>Not a Chair</h1>
+    <p class="meta">
+      広瀬川沿い / ストリートファーニチャー / 2021–<br>
+      Role: Concept / Design / Making
+    </p>
+
+    <!-- 一番上：カードで使っているシリーズのメイン画像 -->
+    <img class="hero-img" src="img/streetfurni_1.jpg.jpg" alt="Not a Chair main view">
+
+    <div class="layout">
+      <!-- 左：テキスト説明 -->
+      <div>
+        <p class="section-title">CONCEPT</p>
+        <p class="body-text">
+          「これは椅子ではない(Not a Chair)」というタイトルの通り、
+          “座るためのもの” から少しはみ出したストリートファーニチャーの在り方を探ったプロジェクト。
+          歩道の途中に現れる小さな段差やブロック、縁石など、
+          すでにまちにあるものの見え方をずらすことで、
+          ふと立ち止まれる場所をつくろうとしている。
+        </p>
+
+        <p class="section-title">OUTLINE</p>
+        <p class="body-text">
+          ・場所：仙台市広瀬川周辺<br>
+          ・内容：ストリートファーニチャー／サイン計画／撮影<br>
+          ・担当：コンセプト立案・スケッチ・現地検証・制作ディレクション
+        </p>
+
+        <p class="section-title">NOTE</p>
+        <p class="body-text">
+          既存のボラードや植栽帯、擁壁などに最小限の操作を加え、
+          そこに「座る」「寄りかかる」「腰掛ける」といった行為が
+          立ち上がるかどうかを実験した。<br>
+          建築的なスケールよりも小さく、家具よりも公共的なスケールの中間に
+          身体を置くことで、まちとの距離感を調整することを試みている。
+        </p>
+      </div>
+
+      <!-- 右：サブ写真ギャラリー -->
+      <div>
+        <p class="section-title">PHOTOS</p>
+        <div class="thumb-grid">
+          <img src="img/streetfurni_2.jpg.jpg" alt="Not a Chair view 2">
+          <img src="img/streetfurni_3.jpg.jpg" alt="Not a Chair view 3">
+          <img src="img/streetfurni_4.jpg.JPG" alt="Not a Chair view 4">
+          <img src="img/streetfurni_5.jpg.jpg" alt="Not a Chair view 5">
+          <img src="img/streetfurni_6.jpg.heic" alt="Not a Chair detail 1">
+          <img src="img/streetfurni_7.jpg.HEIC" alt="Not a Chair detail 2">
+          <img src="img/streetfurni_8.jpg.heic" alt="Not a Chair detail 3">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Munakata Masahiko
+  </footer>
+</body>
+</html>
