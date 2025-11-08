@@ -129,7 +129,7 @@
       <div class="slide"><img src="img/christmas_thumb.jpg.HEIC" alt="Christmas Garden"></div>
       <div class="slide"><img src="img/marathon_thumb.jpg.HEIC" alt="Munakata Marathon"></div>
       <div class="slide"><img src="img/terrace_thumb.jpg.HEIC" alt="DIY Terrace"></div>
-      <div class="slide"><img src="img/chair_thumb.jpg.heic" alt="Not a Chair"></div>
+      <div class="slide"><img src="img/chair_thumb.jpg.heic" alt="M Chair"></div>
       <div class="slide"><img src="img/streetfurni_thumb.jpg.JPG" alt="Hirose Street Furniture"></div>
       <div class="slide"><img src="img/grassa_thumb.jpg.HEIC" alt="GRASSA"></div>
       <div class="slide"><img src="img/maruka_thumb.jpg.HEIC" alt="Kissa Maruka"></div>
@@ -156,8 +156,6 @@
 
   <main>
     <div class="grid">
-      <!-- ここから 24 件のカード -->
-
       <!-- Shop Cafe Qu -->
       <a class="card" href="project_qu.html">
         <img class="thumb" src="img/qu_thumb.jpg.JPG" alt="Shop Cafe Qu">
@@ -212,7 +210,7 @@
         </div>
       </a>
 
-      <!-- Takasaki Renovation（サムネ未設定なら仮画像でもOK） -->
+      <!-- Takasaki Renovation -->
       <a class="card" href="project_takasaki.html">
         <img class="thumb" src="img/takasaki.jpg" alt="Takasaki Renovation">
         <div class="card-body">
@@ -257,12 +255,12 @@
         </div>
       </a>
 
-      <!-- Not a Chair -->
-      <a class="card" href="project_chair.html">
-        <img class="thumb" src="img/chair_thumb.jpg.heic" alt="Not a Chair">
+      <!-- M Chair（旧 Not a Chair） -->
+      <a class="card" href="project_mchair.html">
+        <img class="thumb" src="img/chair_thumb.jpg.heic" alt="M Chair">
         <div class="card-body">
-          <h3 class="card-title">Not a Chair</h3>
-          <p class="card-desc">「これは椅子ではない」シリーズ。家具とアートの境界を探る。</p>
+          <h3 class="card-title">M Chair</h3>
+          <p class="card-desc">アルファベットの「M」をかたどった椅子。座る・飾るのあいだを行き来するプロトタイプ。</p>
         </div>
       </a>
 
@@ -404,7 +402,7 @@
       const slides = document.querySelectorAll('.slide');
       if(!slides.length) return;
       let i = 0;
-      const DURATION = 4800; // ミリ秒
+      const DURATION = 4800;
 
       setInterval(()=>{
         slides[i].classList.remove('active');
